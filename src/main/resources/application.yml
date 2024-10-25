@@ -1,1 +1,13 @@
 node.address: https://arbitrum.drpc.org
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:transactions-db;DB_CLOSE_DELAY=-1;DATABASE_TO_UPPER=false;
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  liquibase:
+    change-log: classpath:/liquebase/changelog.xml
+    enabled: true
+
+
